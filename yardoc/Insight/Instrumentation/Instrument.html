@@ -1,0 +1,815 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Insight::Instrumentation::Instrument
+  
+    &mdash; Documentation by YARD 0.8.1
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Insight.html" title="Insight (module)">Insight</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Instrumentation.html" title="Insight::Instrumentation (module)">Instrumentation</a></span></span>
+     &raquo; 
+    <span class="title">Instrument</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Insight::Instrumentation::Instrument
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Insight::Instrumentation::Instrument</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="Backstage.html" title="Insight::Instrumentation::Backstage (module)">Backstage</a></span>, <span class='object_link'><a href="../Logging.html" title="Insight::Logging (module)">Logging</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/insight/instrumentation/instrument.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Instrument/MethodCall.html" title="Insight::Instrumentation::Instrument::MethodCall (class)">MethodCall</a></span>, <span class='object_link'><a href="Instrument/Timing.html" title="Insight::Instrumentation::Instrument::Timing (class)">Timing</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="call_seq-classvariable" class="">@@call_seq =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#seq_number-class_method" title="seq_number (class method)">+ (Object) <strong>seq_number</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all_collectors-instance_method" title="#all_collectors (instance method)">- (Object) <strong>all_collectors</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#collectors_for-instance_method" title="#collectors_for (instance method)">- (Object) <strong>collectors_for</strong>(method_call) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#duration-instance_method" title="#duration (instance method)">- (Object) <strong>duration</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#finish-instance_method" title="#finish (instance method)">- (Object) <strong>finish</strong>(env, status, headers, body) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#finish_event-instance_method" title="#finish_event (instance method)">- (Object) <strong>finish_event</strong>(method_call, arguments, start_time, result) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Instrument) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Instrument.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong>(object, context = &quot;::&quot;, kind = :instance, called_at = caller[0], method = &quot;&lt;unknown&gt;&quot;, args = [], &amp;blk) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-instance_method" title="#start (instance method)">- (Object) <strong>start</strong>(env) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_event-instance_method" title="#start_event (instance method)">- (Object) <strong>start_event</strong>(method_call, arguments) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Logging.html" title="Insight::Logging (module)">Logging</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Logging.html#logger-class_method" title="Insight::Logging.logger (method)">logger</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Backstage.html" title="Insight::Instrumentation::Backstage (module)">Backstage</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Backstage.html#backstage-instance_method" title="Insight::Instrumentation::Backstage#backstage (method)">#backstage</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Insight::Instrumentation::Instrument (class)">Instrument</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of Instrument</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@start</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+  <span class='ivar'>@collectors</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="seq_number-class_method">
+  
+    + (<tt>Object</tt>) <strong>seq_number</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_seq_number'>seq_number</span>
+  <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_exclusive'>exclusive</span> <span class='kw'>do</span>
+    <span class='kw'>return</span> <span class='cvar'>@@call_seq</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="all_collectors-instance_method">
+  
+    - (<tt>Object</tt>) <strong>all_collectors</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_all_collectors'>all_collectors</span>
+  <span class='const'>PackageDefinition</span><span class='period'>.</span><span class='id identifier rubyid_all_collectors'>all_collectors</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="collectors_for-instance_method">
+  
+    - (<tt>Object</tt>) <strong>collectors_for</strong>(method_call) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_collectors_for'>collectors_for</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_probe_chain'>probe_chain</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_kind'>kind</span> <span class='op'>==</span> <span class='symbol'>:instance</span>
+                  <span class='const'>InstanceProbe</span><span class='period'>.</span><span class='id identifier rubyid_get_probe_chain'>get_probe_chain</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span>
+                <span class='kw'>else</span>
+                  <span class='const'>ClassProbe</span><span class='period'>.</span><span class='id identifier rubyid_get_probe_chain'>get_probe_chain</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span>
+                <span class='kw'>end</span>
+  <span class='id identifier rubyid_collectors'>collectors</span> <span class='op'>=</span> <span class='id identifier rubyid_probe_chain'>probe_chain</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_list'>list</span><span class='comma'>,</span> <span class='id identifier rubyid_probe'>probe</span><span class='op'>|</span>
+    <span class='id identifier rubyid_probe'>probe</span><span class='period'>.</span><span class='id identifier rubyid_collectors'>collectors</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='kw'>do</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Probe chain for: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_context'>context</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_kind'>kind</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='rbrace'>}</span><span class='tstring_content'>:\n  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_collectors'>collectors</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_col'>col</span><span class='op'>|</span> <span class='id identifier rubyid_col'>col</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_collectors'>collectors</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="duration-instance_method">
+  
+    - (<tt>Object</tt>) <strong>duration</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 104</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_duration'>duration</span>
+  <span class='ivar'>@timing</span><span class='period'>.</span><span class='id identifier rubyid_duration'>duration</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="finish-instance_method">
+  
+    - (<tt>Object</tt>) <strong>finish</strong>(env, status, headers, body) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_finish'>finish</span><span class='lparen'>(</span><span class='id identifier rubyid_env'>env</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='ivar'>@timing</span> <span class='op'>=</span> <span class='const'>Timing</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@start</span><span class='comma'>,</span> <span class='ivar'>@start</span><span class='comma'>,</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_all_collectors'>all_collectors</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_collector'>collector</span><span class='op'>|</span>
+    <span class='id identifier rubyid_collector'>collector</span><span class='period'>.</span><span class='id identifier rubyid_request_finish'>request_finish</span><span class='lparen'>(</span><span class='id identifier rubyid_env'>env</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='ivar'>@timing</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="finish_event-instance_method">
+  
+    - (<tt>Object</tt>) <strong>finish_event</strong>(method_call, arguments, start_time, result) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_finish_event'>finish_event</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='comma'>,</span> <span class='id identifier rubyid_arguments'>arguments</span><span class='comma'>,</span> <span class='id identifier rubyid_start_time'>start_time</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_timing'>timing</span> <span class='op'>=</span> <span class='const'>Timing</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@start</span><span class='comma'>,</span> <span class='id identifier rubyid_start_time'>start_time</span><span class='comma'>,</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Finishing event: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_context'>context</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_kind'>kind</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_collectors_for'>collectors_for</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_collector'>collector</span><span class='op'>|</span>
+    <span class='id identifier rubyid_collector'>collector</span><span class='period'>.</span><span class='id identifier rubyid_after_detect'>after_detect</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='comma'>,</span> <span class='id identifier rubyid_timing'>timing</span><span class='comma'>,</span> <span class='id identifier rubyid_arguments'>arguments</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="run-instance_method">
+  
+    - (<tt>Object</tt>) <strong>run</strong>(object, context = &quot;::&quot;, kind = :instance, called_at = caller[0], method = &quot;&lt;unknown&gt;&quot;, args = [], &amp;blk) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_kind'>kind</span><span class='op'>=</span><span class='symbol'>:instance</span><span class='comma'>,</span> <span class='id identifier rubyid_called_at'>called_at</span> <span class='op'>=</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;unknown&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_rest'>rest</span> <span class='op'>=</span> <span class='id identifier rubyid_called_at'>called_at</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>:</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_call_number'>call_number</span> <span class='op'>=</span> <span class='id identifier rubyid_backstage'>backstage</span><span class='lbrace'>{</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_seq_number'>seq_number</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_method_call'>method_call</span> <span class='op'>=</span> <span class='id identifier rubyid_backstage'>backstage</span><span class='lbrace'>{</span> <span class='const'>MethodCall</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_call_number'>call_number</span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_kind'>kind</span><span class='comma'>,</span> <span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='const'>Thread</span><span class='op'>::</span><span class='id identifier rubyid_current'>current</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='comment'>#$stderr.puts [method_call.context, method_call.method].inspect
+</span>  <span class='id identifier rubyid_start_time'>start_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+  <span class='id identifier rubyid_backstage'>backstage</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_start_event'>start_event</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_blk'>blk</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>      <span class='comment'># execute the provided code block
+</span>  <span class='id identifier rubyid_backstage'>backstage</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_finish_event'>finish_event</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='id identifier rubyid_start_time'>start_time</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start</strong>(env) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_env'>env</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_all_collectors'>all_collectors</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_collector'>collector</span><span class='op'>|</span>
+    <span class='id identifier rubyid_collector'>collector</span><span class='period'>.</span><span class='id identifier rubyid_request_start'>request_start</span><span class='lparen'>(</span><span class='id identifier rubyid_env'>env</span><span class='comma'>,</span> <span class='ivar'>@start</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_event-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start_event</strong>(method_call, arguments) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/insight/instrumentation/instrument.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_event'>start_event</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='comma'>,</span> <span class='id identifier rubyid_arguments'>arguments</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Starting event: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_context'>context</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_kind'>kind</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method_call'>method_call</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_collectors_for'>collectors_for</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_collector'>collector</span><span class='op'>|</span>
+    <span class='id identifier rubyid_collector'>collector</span><span class='period'>.</span><span class='id identifier rubyid_before_detect'>before_detect</span><span class='lparen'>(</span><span class='id identifier rubyid_method_call'>method_call</span><span class='comma'>,</span> <span class='id identifier rubyid_arguments'>arguments</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu May 17 23:43:45 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
