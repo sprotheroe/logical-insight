@@ -28,7 +28,9 @@ module Insight
     end
 
     def before_detect(method_call, args)
-      template_name = method_call.object.virtual_path
+      # Convert name to string as Psych has trouble parsing
+      # ActionView::Template::Path from YAML serialization
+      template_name = method_call.object.virtual_path.to_s
 
       rendering = Rendering.new(template_name)
       @current.add(rendering)
