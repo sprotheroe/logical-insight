@@ -23,12 +23,14 @@ module Insight
 
     def initialize(app)
       probe(self) do
-        instrument "ActiveSupport::BufferedLogger" do
-          instance_probe :add
-        end
-
-        instrument "Logger" do
-          instance_probe :add
+        if defined?(ActiveSupport)
+          instrument "ActiveSupport::BufferedLogger" do
+            instance_probe :add
+          end
+        else
+          instrument "Logger" do
+            instance_probe :add
+          end
         end
       end
 
